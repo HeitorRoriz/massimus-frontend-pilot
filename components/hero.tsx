@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -29,13 +30,19 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              className="gap-2 text-base h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Explorar Cursos
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+            <Link
+  href="https://massimus.com/cspo-curso/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="gap-2 text-base h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
+  >
+    Explorar Cursos
+    <ArrowRight className="h-5 w-5" />
+  </Button>
+</Link>
           </div>
 
           {/* Learner rating badge */}
