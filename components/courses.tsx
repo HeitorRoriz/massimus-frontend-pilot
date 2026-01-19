@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Clock, Users, Star, TrendingUp } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const categories = ["Todos", "Agile & Scrum", "Product Management", "Liderança", "AI", "Coaching"]
 
@@ -188,13 +189,17 @@ export function Courses() {
                   </div>
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all bg-transparent"
-                >
-                  Ver Detalhes
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
+               <Link href={course.href ?? "https://massimus.com/cursos/"} target="_blank" rel="noopener noreferrer">
+  <Button
+    size="lg"
+    variant="outline"
+    className="w-full gap-2 h-11 border-border/50 hover:border-border"
+  >
+    Ver Detalhes
+    <ArrowRight className="h-4 w-4" />
+  </Button>
+</Link>
+
               </div>
             </div>
           ))}
