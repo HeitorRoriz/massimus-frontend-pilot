@@ -189,16 +189,20 @@ export function Courses() {
                   </div>
                 </div>
 
-               <Link href={course.href ?? "https://massimus.com/cursos/"} target="_blank" rel="noopener noreferrer">
-  <Button
-    size="lg"
-    variant="outline"
-    className="w-full gap-2 h-11 border-border/50 hover:border-border"
-  >
-    Ver Detalhes
-    <ArrowRight className="h-4 w-4" />
-  </Button>
-</Link>
+               <Link
+                  href={course.href ?? "#"}
+                  target={course.href ? "_blank" : undefined}
+                  rel={course.href ? "noopener noreferrer" : undefined}
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full gap-2 h-11 border-border/50 hover:border-border"
+                >
+                Ver Detalhes
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
 
               </div>
             </div>
