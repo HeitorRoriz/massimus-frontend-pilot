@@ -26,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="font-sans antialiased">
+     <body className="font-sans antialiased">
+        <div style={{ padding: 12, background: "yellow", color: "black", fontWeight: 700 }}>
+          LAYOUT TEST — IF YOU SEE THIS, app/layout.tsx IS ACTIVE
+        </div>
         <SiteHeader />
           {children}
           <Analytics />
