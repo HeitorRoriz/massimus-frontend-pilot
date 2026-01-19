@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { Header } from "@/components/header"
 
 const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
@@ -26,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="font-sans antialiased">
-        {children}
-        <Analytics />
+        <Header />
+          {children}
+          <Analytics />
       </body>
+
     </html>
   )
 }
