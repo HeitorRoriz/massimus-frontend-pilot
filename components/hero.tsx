@@ -32,7 +32,6 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
             href="#cursos"
-            target="_blank"
             rel="noopener noreferrer"
           >
             <Button
