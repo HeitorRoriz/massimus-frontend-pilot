@@ -27,13 +27,21 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
      <body className="font-sans antialiased">
-        <div style={{ padding: 12, background: "yellow", color: "black", fontWeight: 700 }}>
-          LAYOUT TEST — IF YOU SEE THIS, app/layout.tsx IS ACTIVE
-        </div>
-        <SiteHeader />
-          {children}
-          <Analytics />
-      </body>
+  <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 99999, padding: 12, background: "yellow", color: "black", fontWeight: 700 }}>
+    LAYOUT TEST — IF YOU SEE THIS, app/layout.tsx IS ACTIVE
+  </div>
+
+  <div style={{ position: "fixed", top: 48, left: 0, right: 0, zIndex: 99999, background: "white", borderBottom: "1px solid #ddd" }}>
+    <SiteHeader />
+  </div>
+
+  <div style={{ paddingTop: 120 }}>
+    {children}
+  </div>
+
+  <Analytics />
+</body>
+
 
     </html>
   )
