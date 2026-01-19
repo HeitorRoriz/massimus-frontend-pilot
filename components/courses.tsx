@@ -31,6 +31,7 @@ const courses = [
     featured: false,
     trending: false,
     image: "/images/cspo.png",
+    href: "https://massimus.com/cspo-curso/",
   },
   {
     title: "Management 3.0®",
